@@ -1,0 +1,109 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contrate - Portal Escolar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">PORTAL ESCOLAR</div>
+    <nav>
+        <a href="index.html">INÍCIO</a>
+        <a href="vagas.html">VAGAS</a>
+        <a href="curriculo.html">CURRÍCULO</a>
+        <a href="contrate.html">CONTRATE</a>
+        <a href="perfil.html">MEU PERFIL</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <section class="login-box">
+
+        <h1>Cadastre uma Vaga</h1>
+
+        <form action="#" method="post">
+
+            <div class="form-group">
+                <label for="nome-vaga">NOME DA VAGA:</label>
+                <input
+                    type="text"
+                    id="nome-vaga"
+                    name="nome-vaga"
+                    placeholder="Ex: Auxiliar Administrativo"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="resumo">RESUMO DA VAGA:</label>
+                <textarea
+                    id="resumo"
+                    name="resumo"
+                    placeholder="Descreva a oportunidade..."
+                    required
+                ></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="tarefas">TAREFAS PRINCIPAIS:</label>
+                <textarea
+                    id="tarefas"
+                    name="tarefas"
+                    placeholder="Informe as atividades que serão realizadas..."
+                    required
+                ></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="habilidades">HABILIDADES NECESSÁRIAS:</label>
+                <textarea
+                    id="habilidades"
+                    name="habilidades"
+                    placeholder="Informe os requisitos da vaga..."
+                    required
+                ></textarea>
+            </div>
+
+            <div class="form-group">
+                <label for="empresa">NOME DA EMPRESA:</label>
+                <input
+                    type="text"
+                    id="empresa"
+                    name="empresa"
+                    placeholder="Digite o nome da empresa"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="contato">CONTATO:</label>
+                <input
+                    type="email"
+                    id="contato"
+                    name="contato"
+                    placeholder="empresa@email.com"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="btn btn-enviar">
+                ENVIAR
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+<footer>
+    Portal Escolar - Divulgue suas oportunidades.
+</footer>
+
+</body>
+</html>

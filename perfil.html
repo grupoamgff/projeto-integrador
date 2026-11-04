@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Perfil - Portal Escolar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">PORTAL ESCOLAR</div>
+    <nav>
+        <a href="index.html">INÍCIO</a>
+        <a href="vagas.html">VAGAS</a>
+        <a href="curriculo.html">CURRÍCULO</a>
+        <a href="contrate.html">CONTRATE</a>
+        <a href="perfil.html">MEU PERFIL</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <h1 class="titulo">MEU PERFIL</h1>
+
+    <section class="perfil-layout">
+
+        <div class="foto-perfil">
+
+            <div class="foto-circulo">
+                <span>+</span>
+            </div>
+
+            <label for="foto">FOTO DE PERFIL</label>
+
+            <input
+                type="file"
+                id="foto"
+                name="foto"
+                accept="image/*"
+                form="form-perfil"
+            >
+
+        </div>
+
+        <div class="login-box">
+
+            <form id="form-perfil" action="#" method="post">
+
+                <div class="form-group">
+                    <label for="nome">NOME COMPLETO:</label>
+                    <input
+                        type="text"
+                        id="nome"
+                        name="nome"
+                        placeholder="Digite seu nome completo"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="nascimento">DATA DE NASCIMENTO:</label>
+                    <input
+                        type="date"
+                        id="nascimento"
+                        name="nascimento"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="cpf">CPF:</label>
+                    <input
+                        type="text"
+                        id="cpf"
+                        name="cpf"
+                        placeholder="000.000.000-00"
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="sexo">SEXO:</label>
+                    <select id="sexo" name="sexo">
+                        <option value="">Selecione</option>
+                        <option>Feminino</option>
+                        <option>Masculino</option>
+                        <option>Prefiro não informar</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="raca">RAÇA / COR:</label>
+                    <select id="raca" name="raca">
+                        <option value="">Selecione</option>
+                        <option>Branca</option>
+                        <option>Preta</option>
+                        <option>Parda</option>
+                        <option>Amarela</option>
+                        <option>Indígena</option>
+                        <option>Prefiro não informar</option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-enviar">
+                    SALVAR PERFIL
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+</main>
+
+<footer>
+    Portal Escolar - Seus dados e sua trajetória.
+</footer>
+
+</body>
+</html>

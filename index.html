@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Início - Portal Escolar</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header>
+        <div class="logo">PORTAL ESCOLAR</div>
+
+        <nav>
+            <a href="index.html">INÍCIO</a>
+            <a href="vagas.html">VAGAS</a>
+            <a href="curriculo.html">CURRÍCULO</a>
+            <a href="contrate.html">CONTRATE</a>
+            <a href="perfil.html">MEU PERFIL</a>
+        </nav>
+    </header>
+
+    <main class="login-container">
+        <section class="login-box">
+
+            <h1>Bem-vindo!</h1>
+
+            <form action="vagas.html" method="get">
+
+                <div class="form-group">
+                    <label for="cidade">CIDADE:</label>
+                    <select id="cidade" name="cidade" required>
+                        <option value="">Selecione sua cidade</option>
+                        <option value="teresina">Teresina</option>
+                        <option value="parnaiba">Parnaíba</option>
+                        <option value="picos">Picos</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="escola">ESCOLHA A ESCOLA:</label>
+                    <select id="escola" name="escola" required>
+                        <option value="">Selecione sua escola</option>
+                        <option value="raimundo-martins">
+                            CETI Raimundo Martins
+                        </option>
+                    </select>
+                </div>
+
+                <button type="submit" class="btn btn-enviar">
+                    ENTRAR
+                </button>
+
+            </form>
+
+        </section>
+    </main>
+
+    <footer>
+        Portal Escolar - Educação e oportunidades para todos.
+    </footer>
+
+</body>
+</html>

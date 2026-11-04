@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inscrição em Curso</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<header>
+    <div class="logo">PORTAL ESCOLAR</div>
+    <nav>
+        <a href="index.html">INÍCIO</a>
+        <a href="vagas.html">VAGAS</a>
+        <a href="curriculo.html">CURRÍCULO</a>
+        <a href="contrate.html">CONTRATE</a>
+        <a href="perfil.html">MEU PERFIL</a>
+    </nav>
+</header>
+
+<main class="container">
+
+    <section class="login-box">
+
+        <h1>Inscrição no Curso</h1>
+
+        <form action="#" method="post">
+
+            <div class="form-group">
+                <label for="curso">CURSO ESCOLHIDO:</label>
+                <select id="curso" name="curso" required>
+                    <option value="">Selecione um curso</option>
+                    <option>Análise e Desenvolvimento de Sistemas</option>
+                    <option>Administração</option>
+                    <option>Marketing</option>
+                </select>
+            </div>
+
+            <div class="form-group">
+                <label for="nome">NOME COMPLETO:</label>
+                <input
+                    type="text"
+                    id="nome"
+                    name="nome"
+                    placeholder="Digite seu nome completo"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="telefone">TELEFONE:</label>
+                <input
+                    type="tel"
+                    id="telefone"
+                    name="telefone"
+                    placeholder="(00) 00000-0000"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="btn btn-enviar">
+                ENVIAR
+            </button>
+
+        </form>
+
+    </section>
+
+</main>
+
+<footer>
+    Portal Escolar - Faça sua inscrição.
+</footer>
+
+</body>
+</html>
