@@ -4,13 +4,71 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Início - Portal Escolar</title>
+
     <link rel="stylesheet" href="css/style.css">
+
+    <!-- Ajustes exclusivos da página inicial -->
+    <style>
+        .inicio-conteudo {
+            width: 90%;
+            max-width: 1350px;
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 60px;
+        }
+
+        .imagem-inicio {
+            width: 55%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .imagem-inicio img {
+            width: 100%;
+            max-width: 650px;
+            height: auto;
+            object-fit: contain;
+        }
+
+        .inicio-conteudo .login-box {
+            flex-shrink: 0;
+        }
+
+        @media (max-width: 850px) {
+            .inicio-conteudo {
+                flex-direction: column;
+                gap: 25px;
+                padding: 30px 0;
+            }
+
+            .imagem-inicio {
+                width: 100%;
+            }
+
+            .imagem-inicio img {
+                max-width: 450px;
+            }
+
+            .inicio-conteudo .login-box {
+                max-width: 470px;
+            }
+        }
+    </style>
 </head>
+
 <body>
 
+    <!-- CABEÇALHO -->
     <header>
-        <div class="logo">PORTAL ESCOLAR</div>
+
+        <div class="logo">
+            PORTAL ESCOLAR
+        </div>
 
         <nav>
             <a href="index.html">INÍCIO</a>
@@ -19,46 +77,101 @@
             <a href="contrate.html">CONTRATE</a>
             <a href="perfil.html">MEU PERFIL</a>
         </nav>
+
     </header>
 
+
+    <!-- CONTEÚDO PRINCIPAL -->
     <main class="login-container">
-        <section class="login-box">
 
-            <h1>Bem-vindo!</h1>
+        <div class="inicio-conteudo">
 
-            <form action="vagas.html" method="get">
+            <!-- IMAGEM À ESQUERDA -->
+            <div class="imagem-inicio">
 
-                <div class="form-group">
-                    <label for="cidade">CIDADE:</label>
-                    <select id="cidade" name="cidade" required>
-                        <option value="">Selecione sua cidade</option>
-                        <option value="teresina">Teresina</option>
-                        <option value="parnaiba">Parnaíba</option>
-                        <option value="picos">Picos</option>
-                    </select>
-                </div>
+                <img
+                    src="imagens/banner.png"
+                    alt="Conectando jovens a oportunidades, construindo futuros"
+                >
 
-                <div class="form-group">
-                    <label for="escola">ESCOLHA A ESCOLA:</label>
-                    <select id="escola" name="escola" required>
-                        <option value="">Selecione sua escola</option>
-                        <option value="raimundo-martins">
-                            CETI Raimundo Martins
-                        </option>
-                    </select>
-                </div>
+            </div>
 
-                <button type="submit" class="btn btn-enviar">
-                    ENTRAR
-                </button>
 
-            </form>
+            <!-- QUADRADO DE BOAS-VINDAS À DIREITA -->
+            <section class="login-box">
 
-        </section>
+                <h1>Bem-vindo!</h1>
+
+                <form action="vagas.html" method="get">
+
+                    <div class="form-group">
+
+                        <label for="cidade">
+                            CIDADE:
+                        </label>
+
+                        <select id="cidade" name="cidade" required>
+
+                            <option value="">
+                                Selecione sua cidade
+                            </option>
+
+                            <option value="teresina">
+                                Teresina
+                            </option>
+
+                            <option value="coivaras">
+                                Coivaras
+                            </option>
+
+                            <option value="altos">
+                                Altos
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <div class="form-group">
+
+                        <label for="escola">
+                            ESCOLHA A ESCOLA:
+                        </label>
+
+                        <select id="escola" name="escola" required>
+
+                            <option value="">
+                                Selecione sua escola
+                            </option>
+
+                            <option value="raimundo-martins">
+                                CETI Raimundo Martins
+                            </option>
+
+                        </select>
+
+                    </div>
+
+
+                    <button type="submit" class="btn btn-enviar">
+                        ENTRAR
+                    </button>
+
+                </form>
+
+            </section>
+
+        </div>
+
     </main>
 
+
+    <!-- RODAPÉ -->
     <footer>
+
         Portal Escolar - Educação e oportunidades para todos.
+
     </footer>
 
 </body>

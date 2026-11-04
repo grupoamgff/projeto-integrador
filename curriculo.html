@@ -4,13 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inscrição em Curso</title>
+
+    <title>Monte seu Currículo - Portal Escolar</title>
+
     <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
 
 <header>
     <div class="logo">PORTAL ESCOLAR</div>
+
     <nav>
         <a href="index.html">INÍCIO</a>
         <a href="vagas.html">VAGAS</a>
@@ -22,57 +26,303 @@
 
 <main class="container">
 
-    <section class="login-box">
+    <h1 class="titulo">CRIE SEU CURRÍCULO</h1>
 
-        <h1>Inscrição no Curso</h1>
+    <p class="curriculo-intro">
+        Preencha suas informações abaixo para montar
+        seu próprio currículo profissional.
+    </p>
 
-        <form action="#" method="post">
+    <form id="formCurriculo" class="form-curriculo">
+
+        <h2>01. Dados pessoais</h2>
+
+        <div class="form-grid">
+
+            <div class="form-group campo-completo">
+                <label>Nome completo:</label>
+                <input type="text" id="nome" required
+                    placeholder="Digite seu nome completo">
+            </div>
 
             <div class="form-group">
-                <label for="curso">CURSO ESCOLHIDO:</label>
-                <select id="curso" name="curso" required>
-                    <option value="">Selecione um curso</option>
-                    <option>Análise e Desenvolvimento de Sistemas</option>
-                    <option>Administração</option>
-                    <option>Marketing</option>
+                <label>Endereço:</label>
+                <input type="text" id="endereco"
+                    placeholder="Rua, número">
+            </div>
+
+            <div class="form-group">
+                <label>Bairro:</label>
+                <input type="text" id="bairro">
+            </div>
+
+            <div class="form-group">
+                <label>Cidade:</label>
+                <input type="text" id="cidade">
+            </div>
+
+            <div class="form-group">
+                <label>Telefone:</label>
+                <input type="tel" id="telefone"
+                    placeholder="(00) 00000-0000">
+            </div>
+
+            <div class="form-group">
+                <label>E-mail:</label>
+                <input type="email" id="email"
+                    placeholder="seuemail@email.com">
+            </div>
+
+            <div class="form-group">
+                <label>Estado civil:</label>
+                <select id="estadoCivil">
+                    <option value="">Selecione</option>
+                    <option>Solteiro(a)</option>
+                    <option>Casado(a)</option>
+                    <option>Divorciado(a)</option>
+                    <option>Viúvo(a)</option>
+                    <option>Prefiro não informar</option>
                 </select>
             </div>
 
+        </div>
+
+        <h2>02. Formação</h2>
+
+        <div class="form-group">
+            <label>Graduação / Escolaridade:</label>
+            <input type="text" id="graduacao"
+                placeholder="Ex: Ensino Médio completo">
+        </div>
+
+        <div class="form-group">
+            <label>Instituição:</label>
+            <input type="text" id="instituicao"
+                placeholder="Nome da escola ou instituição">
+        </div>
+
+        <div class="form-group">
+            <label>Conclusão:</label>
+            <input type="text" id="conclusao"
+                placeholder="Ex: 2025">
+        </div>
+
+        <h2>03. Cursos</h2>
+
+        <div class="form-group">
+            <label>Informe os cursos que você realizou:</label>
+            <textarea id="cursos"
+                placeholder="Digite um curso por linha"></textarea>
+        </div>
+
+        <h2>04. Eventos e congressos</h2>
+
+        <div class="form-group">
+            <label>Eventos, palestras e congressos:</label>
+            <textarea id="eventos"
+                placeholder="Informe os eventos dos quais participou"></textarea>
+        </div>
+
+        <h2>05. Experiência profissional</h2>
+
+        <div class="form-group">
+            <label>Empresa:</label>
+            <input type="text" id="empresa"
+                placeholder="Nome da empresa">
+        </div>
+
+        <div class="form-grid">
+
             <div class="form-group">
-                <label for="nome">NOME COMPLETO:</label>
-                <input
-                    type="text"
-                    id="nome"
-                    name="nome"
-                    placeholder="Digite seu nome completo"
-                    required
-                >
+                <label>Período:</label>
+                <input type="text" id="periodo"
+                    placeholder="Ex: 2023 - 2025">
             </div>
 
             <div class="form-group">
-                <label for="telefone">TELEFONE:</label>
-                <input
-                    type="tel"
-                    id="telefone"
-                    name="telefone"
-                    placeholder="(00) 00000-0000"
-                    required
-                >
+                <label>Função:</label>
+                <input type="text" id="funcao"
+                    placeholder="Ex: Auxiliar administrativo">
             </div>
 
-            <button type="submit" class="btn btn-enviar">
-                ENVIAR
+        </div>
+
+        <div class="form-group">
+            <label>Descrição das atividades:</label>
+            <textarea id="atividades"
+                placeholder="Descreva suas atividades profissionais"></textarea>
+        </div>
+
+        <h2>06. Áreas de conhecimento</h2>
+
+        <div class="form-group">
+            <label>Quais são suas habilidades e conhecimentos?</label>
+            <textarea id="conhecimentos"
+                placeholder="Ex: Informática, comunicação, trabalho em equipe..."></textarea>
+        </div>
+
+        <div class="form-group">
+            <label>Cidade e data:</label>
+            <input type="text" id="dataLocal"
+                placeholder="Ex: Teresina, 04 de novembro de 2026">
+        </div>
+
+        <button type="submit" class="btn btn-enviar">
+            GERAR MEU CURRÍCULO
+        </button>
+
+    </form>
+
+
+    <!-- CURRÍCULO GERADO -->
+
+    <section id="resultadoCurriculo" class="resultado-curriculo" hidden>
+
+        <div class="botoes-curriculo">
+            <h2>Seu currículo está pronto!</h2>
+
+            <button type="button" class="btn"
+                onclick="window.print()">
+                SALVAR EM PDF
             </button>
+        </div>
 
-        </form>
+        <article id="documentoCurriculo" class="documento-curriculo">
+
+            <h1>CURRICULUM VITAE</h1>
+
+            <h2 id="saidaNome"></h2>
+
+            <hr>
+
+            <h3>DADOS PESSOAIS</h3>
+            <div id="saidaDados"></div>
+
+            <hr>
+
+            <h3>FORMAÇÃO</h3>
+            <div id="saidaFormacao"></div>
+
+            <hr>
+
+            <h3>CURSOS</h3>
+            <div id="saidaCursos"></div>
+
+            <hr>
+
+            <h3>EVENTOS E CONGRESSOS</h3>
+            <div id="saidaEventos"></div>
+
+            <hr>
+
+            <h3>EXPERIÊNCIA PROFISSIONAL</h3>
+            <div id="saidaExperiencia"></div>
+
+            <hr>
+
+            <h3>ÁREAS DE CONHECIMENTO</h3>
+            <div id="saidaConhecimentos"></div>
+
+            <p id="saidaData" class="data-curriculo"></p>
+
+        </article>
 
     </section>
 
 </main>
 
 <footer>
-    Portal Escolar - Faça sua inscrição.
+    Portal Escolar - Educação e oportunidades para todos.
 </footer>
+
+
+<script>
+
+    const formulario = document.getElementById("formCurriculo");
+
+    // Protege os dados inseridos pelo usuário
+    function escapar(texto) {
+        return String(texto).replace(/[&<>"']/g, function(caractere) {
+            return {
+                "&": "&amp;",
+                "<": "&lt;",
+                ">": "&gt;",
+                '"': "&quot;",
+                "'": "&#039;"
+            }[caractere];
+        });
+    }
+
+    // Transforma cada linha em um item de lista
+    function criarLista(texto) {
+        const itens = texto.split("\n")
+            .map(item => item.trim())
+            .filter(item => item !== "");
+
+        if (itens.length === 0) {
+            return "<p>Não informado.</p>";
+        }
+
+        return "<ul>" + itens.map(item =>
+            "<li>" + escapar(item) + "</li>"
+        ).join("") + "</ul>";
+    }
+
+    formulario.addEventListener("submit", function(event) {
+
+        event.preventDefault();
+
+        const valor = id => document.getElementById(id).value.trim();
+
+        document.getElementById("saidaNome").textContent =
+            valor("nome").toUpperCase();
+
+        document.getElementById("saidaDados").innerHTML = `
+            <p><strong>Endereço:</strong> ${escapar(valor("endereco"))}</p>
+            <p><strong>Bairro:</strong> ${escapar(valor("bairro"))}</p>
+            <p><strong>Cidade:</strong> ${escapar(valor("cidade"))}</p>
+            <p><strong>Telefone:</strong> ${escapar(valor("telefone"))}</p>
+            <p><strong>Estado Civil:</strong> ${escapar(valor("estadoCivil"))}</p>
+            <p><strong>E-mail:</strong> ${escapar(valor("email"))}</p>
+        `;
+
+        document.getElementById("saidaFormacao").innerHTML = `
+            <ul>
+                <li><strong>Graduação:</strong> ${escapar(valor("graduacao"))}</li>
+                <li><strong>Instituição:</strong> ${escapar(valor("instituicao"))}</li>
+                <li><strong>Conclusão:</strong> ${escapar(valor("conclusao"))}</li>
+            </ul>
+        `;
+
+        document.getElementById("saidaCursos").innerHTML =
+            criarLista(valor("cursos"));
+
+        document.getElementById("saidaEventos").innerHTML =
+            criarLista(valor("eventos"));
+
+        document.getElementById("saidaExperiencia").innerHTML = `
+            <ul>
+                <li><strong>Empresa:</strong> ${escapar(valor("empresa"))}</li>
+                <li><strong>Período:</strong> ${escapar(valor("periodo"))}</li>
+                <li><strong>Função:</strong> ${escapar(valor("funcao"))}</li>
+                <li><strong>Atividades:</strong> ${escapar(valor("atividades"))}</li>
+            </ul>
+        `;
+
+        document.getElementById("saidaConhecimentos").innerHTML =
+            criarLista(valor("conhecimentos"));
+
+        document.getElementById("saidaData").textContent =
+            valor("dataLocal");
+
+        document.getElementById("resultadoCurriculo").hidden = false;
+
+        document.getElementById("resultadoCurriculo")
+            .scrollIntoView({ behavior: "smooth" });
+
+    });
+
+</script>
 
 </body>
 </html>
